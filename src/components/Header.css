@@ -1,0 +1,48 @@
+.Header {
+  display: flex;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  justify-content: space-between;
+  background: #fdfcf7; /* 따뜻한 톤 */
+  color: #222;
+  border-bottom: 1px solid #e0ddd7;
+}
+
+.section_logo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-left: 40px;
+}
+.section_logo .Logo {
+  margin: 0px 0px 0px 10px;
+  width: 34px;
+  height: 34px;
+}
+
+.section_logo > p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.section_menu ul {
+  display: flex;
+  list-style: none;
+
+  padding: 0;
+  gap: 100px;
+}
+
+.section_menu li {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.section_user button {
+  padding: 6px 12px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 10px 30px;
+}
