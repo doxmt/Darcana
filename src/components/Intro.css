@@ -1,0 +1,113 @@
+.Intro {
+  position: relative;
+  height: 100svh;
+  overflow: hidden;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  filter: blur(0.3px);
+}
+
+.snow {
+  position: absolute;
+  background: gold;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0vh, 0);
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translate3d(-10px, 50vh, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(10px, 110vh, 0);
+  }
+}
+
+.tarot_girl {
+  position: absolute;
+  bottom: 0;
+  right: -60px;
+  width: 620px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.speech_bubble {
+  position: absolute;
+  top: 25%;
+  left: 35%;
+  width: 380px;
+  min-height: 140px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* 말풍선 꼬리 */
+.speech_bubble::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -18px; /* 캐릭터 쪽으로 꼬리 */
+  transform: translateY(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #fff;
+}
+
+.bubble_text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.bubble_btn {
+  align-self: center;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #6b5cff, #a58bff);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bubble_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(165, 139, 255, 0.4);
+}
