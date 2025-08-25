@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
 import "./Intro.css";
 import TarotGirl from "../assets/TarotGirl.png";
-
+import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 const Intro = () => {
+  const nav = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,7 +39,7 @@ const Intro = () => {
         <p className="bubble_text">
           카드를 뽑고 오늘의 운세를 확인해 보세요 ✨
         </p>
-        <button className="bubble_btn">카드 뽑으러 가기</button>
+        <Button text={"카드 뽑으러 가기"} onClick={() => nav("/daily-tarot")} />
       </div>
       <img className="tarot_girl" src={TarotGirl} alt="타로 캐릭터" />
     </div>

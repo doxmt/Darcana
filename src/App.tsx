@@ -1,12 +1,20 @@
 import "./App.css";
-import Header from "./components/Header";
-import Home from "./pages/home";
+import DailyTarot from "./pages/DailyTarot";
+import Home from "./pages/Home";
+// import Button from "./components/Button";
+import { Routes, Route } from "react-router-dom";
+import ThemeTarot from "./pages/ThemeTarot";
+import CardAnalysis from "./pages/CardAnalysis";
 
 function App() {
   return (
     <>
-      <Header />
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/daily-tarot" element={<DailyTarot />} />
+        <Route path="/theme-tarot" element={<ThemeTarot />} />
+        <Route path="/card-analysis" element={<CardAnalysis />} />
+      </Routes>
     </>
   );
 }

@@ -38,11 +38,6 @@
   font-weight: bold;
 }
 
-.section_user button {
-  padding: 6px 12px;
-  border: 1px solid black;
-  background: white;
-  cursor: pointer;
-  border-radius: 4px;
-  margin: 10px 30px;
+.section_user {
+  padding: 8px 20px;
 }
