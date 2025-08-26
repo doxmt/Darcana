@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react";
 import "./Intro.css";
-import TarotGirl from "../assets/TarotGirl.png";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import TarotGirl from "./TarotGirl.tsx";
+import SpeechBubble from "./SpeechBubble.tsx";
 const Intro = () => {
   const nav = useNavigate();
   const containerRef = useRef<HTMLDivElement>(null);
@@ -35,13 +36,17 @@ const Intro = () => {
 
   return (
     <div className="Intro" ref={containerRef}>
-      <div className="speech_bubble">
-        <p className="bubble_text">
-          카드를 뽑고 오늘의 운세를 확인해 보세요 ✨
-        </p>
-        <Button text={"카드 뽑으러 가기"} onClick={() => nav("/daily-tarot")} />
-      </div>
-      <img className="tarot_girl" src={TarotGirl} alt="타로 캐릭터" />
+      <SpeechBubble
+        bubbleId={1}
+        text={"카드를 뽑고 오늘의 운세를 확인해 보세요 ✨"}
+        children={
+          <Button
+            text={"카드 뽑으러 가기"}
+            onClick={() => nav("/daily-tarot")}
+          />
+        }
+      />
+      <TarotGirl tarotgirlId={1} />
     </div>
   );
 };
