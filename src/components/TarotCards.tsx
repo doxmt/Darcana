@@ -15,7 +15,7 @@ const TarotCards = ({ onClickBtn, cardId, isReversed }: TarotCardsProps) => {
   return (
     <div className="TarotCards">
       <div className="cards-container">
-        <div className="card">
+        <div className={`card ${hasDraw ? "revealed" : ""}`}>
           {hasDraw ? (
             <Card cardId={cardId!} isReversed={isReversed} />
           ) : (

@@ -20,6 +20,7 @@
 }
 
 .card {
+  position: relative;
   width: 216px;
   height: 384px;
   border-radius: 8px;
@@ -34,4 +35,83 @@
   object-fit: cover;
   display: block;
   border-radius: inherit;
+}
+
+.card.revealed .card_img {
+  position: relative;
+  animation: revealScan 3s ease forwards;
+  opacity: 0;
+}
+
+/* 빛줄기 */
+.card.revealed::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.7),
+    transparent 70%
+  );
+  transform: translateX(-100%);
+  animation: lightSweep 3s ease forwards;
+  pointer-events: none;
+}
+
+/* 별빛 반짝임 */
+.card.revealed::before {
+  content: "";
+  position: absolute;
+  inset: -40px; /* 카드보다 살짝 크게 */
+  background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.8) 0%,
+        transparent 60%
+      )
+      20% 30% / 6px 6px,
+    radial-gradient(circle, rgba(200, 180, 255, 0.7) 0%, transparent 60%) 80%
+      40% / 8px 8px,
+    radial-gradient(circle, rgba(255, 215, 150, 0.9) 0%, transparent 70%) 60%
+      80% / 5px 5px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, transparent 70%) 40%
+      70% / 7px 7px;
+  background-repeat: no-repeat;
+  animation: twinkle 2s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes revealScan {
+  from {
+    opacity: 0;
+    filter: brightness(1.5) blur(6px);
+  }
+  to {
+    opacity: 1;
+    filter: brightness(1) blur(0);
+  }
+}
+
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* 반짝이는 별빛 효과 */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
