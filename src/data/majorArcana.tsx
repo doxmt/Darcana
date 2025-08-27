@@ -16,7 +16,7 @@ export type TarotCard = {
 
 export const majorArcana: TarotCard[] = [
   {
-    id: 1,
+    id: 0,
     number: "0",
     key: "the-fool",
     nameKo: "바보",
@@ -31,7 +31,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "충동적 선택 경계. 기초가 부족하면 발목 잡힐 수 있음.",
   },
   {
-    id: 2,
+    id: 1,
     number: "I",
     key: "the-magician",
     nameKo: "마법사",
@@ -46,7 +46,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "동기 부족/산만함. 실행보다 말이 앞설 수 있음.",
   },
   {
-    id: 3,
+    id: 2,
     number: "II",
     key: "the-high-priestess",
     nameKo: "여사제",
@@ -60,7 +60,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "잡음이 직관을 가린다. 혼자만 알지 말고 기록/정리 필요.",
   },
   {
-    id: 4,
+    id: 3,
     number: "III",
     key: "the-empress",
     nameKo: "여제",
@@ -75,7 +75,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "과한 집착/지출 주의. 균형 회복이 필요.",
   },
   {
-    id: 5,
+    id: 4,
     number: "IV",
     key: "the-emperor",
     nameKo: "황제",
@@ -89,7 +89,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "융통성 부족 경계. 권위보다 설득이 필요.",
   },
   {
-    id: 6,
+    id: 5,
     number: "V",
     key: "the-hierophant",
     nameKo: "교황",
@@ -103,7 +103,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "틀을 깨야 성장. 스스로의 원칙 재정의.",
   },
   {
-    id: 7,
+    id: 6,
     number: "VI",
     key: "the-lovers",
     nameKo: "연인",
@@ -117,7 +117,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "가치 충돌. 감정보다 기준을 먼저 세워라.",
   },
   {
-    id: 8,
+    id: 7,
     number: "VII",
     key: "the-chariot",
     nameKo: "전차",
@@ -131,7 +131,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "방향 재점검. 급할수록 속도를 낮춰라.",
   },
   {
-    id: 9,
+    id: 8,
     number: "VIII",
     key: "strength",
     nameKo: "힘",
@@ -145,7 +145,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "자책에서 벗어나 회복 루틴 만들기.",
   },
   {
-    id: 10,
+    id: 9,
     number: "IX",
     key: "the-hermit",
     nameKo: "은자",
@@ -159,7 +159,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "고립 주의. 필요한 도움을 요청하라.",
   },
   {
-    id: 11,
+    id: 10,
     number: "X",
     key: "wheel-of-fortune",
     nameKo: "운명의 수레바퀴",
@@ -173,7 +173,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "무리한 개입은 역효과. 때를 기다리자.",
   },
   {
-    id: 12,
+    id: 11,
     number: "XI",
     key: "justice",
     nameKo: "정의",
@@ -187,7 +187,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "감정/사심 점검. 책임을 미루지 말 것.",
   },
   {
-    id: 13,
+    id: 12,
     number: "XII",
     key: "the-hanged-man",
     nameKo: "매달린 남자",
@@ -201,7 +201,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "붙잡고 있는 것을 내려놓을 때 움직인다.",
   },
   {
-    id: 14,
+    id: 13,
     number: "XIII",
     key: "death",
     nameKo: "죽음",
@@ -215,7 +215,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "미루는 변화가 더 고통을 키운다.",
   },
   {
-    id: 15,
+    id: 14,
     number: "XIV",
     key: "temperance",
     nameKo: "절제",
@@ -229,7 +229,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "극단 피하고 리듬부터 회복.",
   },
   {
-    id: 16,
+    id: 15,
     number: "XV",
     key: "the-devil",
     nameKo: "악마",
@@ -243,7 +243,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "끊어낼 힘이 생긴다. 작은 승리부터.",
   },
   {
-    id: 17,
+    id: 16,
     number: "XVI",
     key: "the-tower",
     nameKo: "탑",
@@ -257,7 +257,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "피해를 줄이고 배우는 국면.",
   },
   {
-    id: 18,
+    id: 17,
     number: "XVII",
     key: "the-star",
     nameKo: "별",
@@ -271,7 +271,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "스스로를 의심하지 말 것. 작은 성취부터.",
   },
   {
-    id: 19,
+    id: 18,
     number: "XVIII",
     key: "the-moon",
     nameKo: "달",
@@ -285,7 +285,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "안개가 걷힌다. 사실 확인 후 판단.",
   },
   {
-    id: 20,
+    id: 19,
     number: "XIX",
     key: "the-sun",
     nameKo: "태양",
@@ -299,7 +299,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "과신 주의. 페이스 관리가 필요.",
   },
   {
-    id: 21,
+    id: 20,
     number: "XX",
     key: "judgement",
     nameKo: "심판",
@@ -313,7 +313,7 @@ export const majorArcana: TarotCard[] = [
     descReversed: "결정을 미루지 말 것. 배운 걸 적용.",
   },
   {
-    id: 22,
+    id: 21,
     number: "XXI",
     key: "the-world",
     nameKo: "세계",
