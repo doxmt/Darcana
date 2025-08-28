@@ -1,7 +1,7 @@
 import "./SpeechBubble.css";
 
 type SpeechBubbleProps = {
-  text: string;
+  text: React.ReactNode;
   children?: React.ReactNode;
   bubbleId: number;
 };
