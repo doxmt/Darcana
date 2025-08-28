@@ -29,6 +29,12 @@
   --rotate: 0deg;
 }
 
+.card_img:hover {
+  filter: drop-shadow(0 0 12px rgba(214, 179, 255, 0.6));
+  transform: scale(1.05) rotate(var(--rotate));
+  transition: all 0.3s ease-in-out;
+}
+
 .card_img.reversed {
   --rotate: 180deg;
 }
@@ -43,4 +49,51 @@
   100% {
     transform: rotate(var(--rotate)) translateY(0px);
   }
+}
+
+.SpeechBubble.SpeechBubble3 .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.6),
+    0 0 12px rgba(180, 160, 255, 0.4);
+}
+
+.SpeechBubble.SpeechBubble3 .highlight-label,
+.highlight-keyword {
+  color: #ffd966;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(255, 217, 102, 0.6);
+}
+
+.SpeechBubble.SpeechBubble3 .highlight-desc {
+  color: #d6b3ff;
+  font-weight: 700;
+  font-style: italic;
+  text-shadow: 0 0 8px rgba(214, 179, 255, 0.7);
+}
+
+.SpeechBubble.SpeechBubble3 {
+  line-height: 1.7;
+}
+
+.SpeechBubble.SpeechBubble3 .fortune-box {
+  display: block;
+  margin-top: 18px;
+  padding: 16px 20px;
+
+  background: rgba(40, 35, 70, 0.9); /* 차분한 보라톤 반투명 */
+  border: 1px solid rgba(190, 170, 255, 0.5);
+  border-radius: 12px;
+
+  color: #f7ecff; /* 은은한 보라빛 글자 */
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
+
+  /* 살짝만 그림자 */
+  box-shadow: 0 0 12px rgba(160, 130, 255, 0.25);
 }

@@ -59,3 +59,48 @@
   border-style: solid;
   border-color: #fff transparent transparent transparent;
 }
+.SpeechBubble.SpeechBubble3 {
+  width: 500px;
+  min-height: 280px;
+  top: 10%;
+  left: 45%;
+  padding: 25px;
+
+  /* 반투명 + 은은한 그라디언트 */
+  background: rgba(20, 20, 40, 0.85);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 30, 60, 0.9),
+    rgba(10, 10, 25, 0.85)
+  );
+
+  /* 보더에 빛나는 효과 */
+  border: 2px solid rgba(180, 160, 255, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(150, 120, 255, 0.4),
+    0 0 40px rgba(100, 80, 200, 0.2);
+
+  /* 폰트 스타일 */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f1e9ff;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: 0.3px;
+
+  /* 살짝 부드럽게 등장 */
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.SpeechBubble.SpeechBubble3::after {
+  display: none;
+}
