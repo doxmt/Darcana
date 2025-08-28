@@ -1,43 +1,75 @@
 .Header {
   display: flex;
-  border-bottom: 1px solid rgb(226, 226, 226);
+  align-items: center;
   justify-content: space-between;
-  background: #fdfcf7; /* 따뜻한 톤 */
+  padding: 0 32px;
+  background: #fdfcf7;
   color: #222;
   border-bottom: 1px solid #e0ddd7;
+  height: 55px;
 }
 
 .section_logo {
   display: flex;
-  gap: 8px;
+  gap: 10px;
   align-items: center;
-  margin-left: 40px;
 }
 .section_logo .Logo {
-  margin: 0px 0px 0px 10px;
   width: 34px;
   height: 34px;
 }
-
 .section_logo > p {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
 .section_menu ul {
   display: flex;
   list-style: none;
-
+  margin: 0;
   padding: 0;
-  gap: 100px;
+  gap: 64px;
 }
-
 .section_menu li {
   cursor: pointer;
   font-size: 15px;
-  font-weight: bold;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.2s ease;
 }
-
+.section_menu li:hover {
+  color: #5c4ac7;
+}
+.section_menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: #5c4ac7;
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+}
+.section_menu li:hover::after {
+  transform: scaleX(1);
+}
 .section_user {
-  padding: 8px 20px;
+  padding: 6px 16px;
+}
+.section_user button {
+  background: linear-gradient(135deg, #8b7cff, #6d5bff);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.section_user button:hover {
+  box-shadow: 0 4px 10px rgba(109, 91, 255, 0.3);
+  transform: translateY(-1px);
 }
