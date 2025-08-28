@@ -15,7 +15,7 @@ function App() {
         <Route path="/daily-tarot" element={<DailyTarot />} />
         <Route path="/theme-tarot" element={<ThemeTarot />} />
         <Route path="/card-analysis" element={<CardAnalysis />} />
-        <Route path="/explanation/:id" element={<Explanation />} />
+        <Route path="/explanation/:id/:direction" element={<Explanation />} />
       </Routes>
     </>
   );

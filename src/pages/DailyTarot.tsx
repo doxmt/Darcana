@@ -39,7 +39,13 @@ const DailyTarot = () => {
         {draw && (
           <Button
             text={"결과 보러 가기"}
-            onClick={() => nav(`/explanation/${draw.card.id}`)}
+            onClick={() =>
+              nav(
+                `/explanation/${draw.card.id}/${
+                  draw.isReversed ? "reversed" : "normal"
+                }`
+              )
+            }
           />
         )}
       </SpeechBubble>
