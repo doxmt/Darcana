@@ -8,6 +8,7 @@ import { pickRandomCard } from "../util/pick-tarot-card";
 import type { DrawResult } from "../util/pick-tarot-card";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
+import usePageTitle from "../hooks/usePageTitle";
 
 const DailyTarot = () => {
   const nav = useNavigate();
@@ -16,6 +17,7 @@ const DailyTarot = () => {
     const result = pickRandomCard();
     setDraw(result);
   };
+  usePageTitle("Darcana - 오늘의 타로 뽑기");
 
   return (
     <div className="DailyTarot">
