@@ -15,3 +15,8 @@
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(165, 139, 255, 0.4);
 }
+
+.Button.active {
+  background: linear-gradient(135deg, #ff4d4d, #ff9966);
+  box-shadow: 0 4px 10px rgba(165, 139, 255, 0.4);
+}
