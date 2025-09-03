@@ -2,7 +2,7 @@ import "./Button.css";
 
 type ButtonProps = {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
   isActive?: boolean;
 };
 
