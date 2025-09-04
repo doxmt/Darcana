@@ -4,11 +4,16 @@ import tarotCardIcon from "../assets/TarotCardIcon.svg";
 import { useState } from "react";
 import Button from "./Button";
 import CardList from "./CardList";
+import Overlay from "./Overlay";
+import type { TarotCard } from "../data/majorArcana";
 const CardContainer = () => {
   const [activeFilter, setActiveFilter] = useState("전체");
   const onclickFilter = (value: string) => {
     setActiveFilter(value);
   };
+
+  const [selectedCard, setSelectedCard] = useState<TarotCard | null>(null);
+
   return (
     <div className="CardContainer">
       <div className="title">
@@ -27,7 +32,12 @@ const CardContainer = () => {
           />
         ))}
       </div>
-      <CardList />
+      <CardList onSelect={(card) => setSelectedCard(card)} />
+      <Overlay
+        isOpen={!!selectedCard}
+        card={selectedCard}
+        onClose={() => setSelectedCard(null)}
+      />
     </div>
   );
 };
