@@ -1,7 +1,7 @@
 import "./Card.css";
 import { getCardImage } from "../util/get-card-image";
 
-type CardProps = {
+export type CardProps = {
   cardId?: number;
   isReversed?: boolean;
 };

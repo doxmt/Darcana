@@ -1,0 +1,38 @@
+.CardContainer {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  background: linear-gradient(160deg, #232526 0%, #414345 100%);
+
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.CardContainer .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.CardContainer .title img {
+  width: 28px;
+  height: 28px;
+}
+
+.CardContainer .title h4 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+
+  width: fit-content;
+  margin: 30px auto;
+}
