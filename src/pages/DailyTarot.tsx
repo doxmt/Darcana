@@ -3,21 +3,53 @@ import Footer from "../components/Footer";
 import TarotCards from "../components/TarotCards";
 import TarotGirl from "../components/TarotGirl";
 import SpeechBubble from "../components/SpeechBubble";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { pickRandomCard } from "../util/pick-tarot-card";
 import type { DrawResult } from "../util/pick-tarot-card";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import usePageTitle from "../hooks/usePageTitle";
 import "./DailyTarot.css";
+import { getToday } from "../util/date";
 
 const DailyTarot = () => {
+  const KEY = "dailyTarot.draw";
   const nav = useNavigate();
   const [draw, setDraw] = useState<DrawResult | null>(null);
+  const [locked, setLocked] = useState<boolean>(false);
+
   const onClickBtn = () => {
+    if (locked) return alert("오늘은 이미 카드를 뽑았습니다");
+
     const result = pickRandomCard();
     setDraw(result);
+    setLocked(true);
+    localStorage.setItem(
+      KEY,
+      JSON.stringify({ date: getToday(), draw: result })
+    );
   };
+
+  useEffect(() => {
+    const raw = localStorage.getItem(KEY);
+    if (!raw) {
+      setLocked(false);
+      return;
+    }
+    try {
+      const saved = JSON.parse(raw);
+      if (saved.date === getToday()) {
+        setDraw(saved.draw);
+        setLocked(true);
+      } else {
+        setLocked(false);
+        localStorage.removeItem(KEY);
+      }
+    } catch {
+      setLocked(false);
+    }
+  }, []);
+
   usePageTitle("Darcana - 오늘의 타로 뽑기");
 
   return (
