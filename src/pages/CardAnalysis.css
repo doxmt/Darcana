@@ -1,0 +1,20 @@
+@media (max-width: 413px) {
+  .SearchBar {
+    width: 200px;
+    left: -10%;
+  }
+
+  .SearchBar input {
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 414px) and (max-width: 599px) {
+  .SearchBar {
+    width: 300px;
+    left: -10%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1179px) {
+}

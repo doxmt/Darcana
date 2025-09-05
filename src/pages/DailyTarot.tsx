@@ -9,6 +9,7 @@ import type { DrawResult } from "../util/pick-tarot-card";
 import Button from "../components/Button";
 import { useNavigate } from "react-router-dom";
 import usePageTitle from "../hooks/usePageTitle";
+import "./DailyTarot.css";
 
 const DailyTarot = () => {
   const nav = useNavigate();
