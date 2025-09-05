@@ -1,14 +1,14 @@
 /* 기본값 */
-.TarotGirl,
-.SpeechBubble {
+.Home .TarotGirl,
+.Home .SpeechBubble {
   transform: none;
   transition: transform 160ms ease-out;
   will-change: transform;
 }
-.TarotGirl {
+.Home .TarotGirl {
   transform-origin: bottom center;
 }
-.SpeechBubble {
+.Home .SpeechBubble {
   transform-origin: top left;
 }
 /* 모바일 */
@@ -30,23 +30,23 @@
     display: none;
   }
 
-  .Header {
+  .Home .Header {
     padding: 8px 12px;
   }
-  .Header .section_logo .Logo {
+  .Home .Header .section_logo .Logo {
     width: 22px;
     height: 22px;
   }
-  .Header .section_logo p {
+  .Home .Header .section_logo p {
     font-size: 0.6rem;
   }
-  .Header .section_menu ul {
+  .Home .Header .section_menu ul {
     gap: 20px;
   }
-  .Header .section_menu ul li {
+  .Home .Header .section_menu ul li {
     font-size: 0.6rem;
   }
-  .Header .section_user button {
+  .Home .Header .section_user button {
     font-size: 0.6rem;
     padding: 6px 10px;
   }
@@ -69,23 +69,23 @@
     display: none;
   }
 
-  .Header {
+  .Home .Header {
     padding: 8px 12px;
   }
-  .Header .section_logo .Logo {
+  .Home .Header .section_logo .Logo {
     width: 27px;
     height: 27px;
   }
-  .Header .section_logo p {
+  .Home .Header .section_logo p {
     font-size: 0.8rem;
   }
-  .Header .section_menu ul {
+  .Home .Header .section_menu ul {
     gap: 20px;
   }
-  .Header .section_menu ul li {
+  .Home .Header .section_menu ul li {
     font-size: 0.8rem;
   }
-  .Header .section_user button {
+  .Home .Header .section_user button {
     font-size: 0.8rem;
     padding: 6px 10px;
   }
@@ -93,60 +93,60 @@
 
 /* 1024~1179px */
 @media (min-width: 1024px) and (max-width: 1179px) {
-  .TarotGirl {
+  .Home .TarotGirl {
     transform: scale(0.8);
   }
-  .SpeechBubble {
+  .Home .SpeechBubble {
     transform: scale(0.8);
   }
 }
 
 /* 1180~1365px */
 @media (min-width: 1180px) and (max-width: 1365px) {
-  .TarotGirl {
+  .Home .TarotGirl {
     transform: scale(0.9);
   }
-  .SpeechBubble {
+  .Home .SpeechBubble {
     transform: scale(0.9);
   }
 }
 
 /* 1366~1440px */
 @media (min-width: 1366px) and (max-width: 1440px) {
-  .TarotGirl {
+  .Home .TarotGirl {
     transform: scale(1);
   }
-  .SpeechBubble {
+  .Home .SpeechBubble {
     transform: scale(1);
   }
 }
 
 /* 1441~1599px (노트북 확장) */
 @media (min-width: 1441px) and (max-width: 1599px) {
-  .TarotGirl {
+  .Home .TarotGirl {
     transform: scale(1.2);
   }
-  .SpeechBubble {
+  .Home .SpeechBubble {
     transform: scale(1);
   }
 }
 
 /* 1600~1919px (큰 모니터) */
 @media (min-width: 1600px) and (max-width: 1919px) {
-  .TarotGirl {
+  .Home .TarotGirl {
     transform: scale(1.2);
   }
-  .SpeechBubble {
+  .Home .SpeechBubble {
     transform: scale(1.2);
   }
 }
 
 /* 1920px+ (데스크탑) */
 @media (min-width: 1920px) {
-  .TarotGirl {
+  .Home .TarotGirl {
     transform: scale(1.4);
   }
-  .SpeechBubble {
+  .Home .SpeechBubble {
     transform: scale(1.4);
   }
 }
