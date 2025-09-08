@@ -19,7 +19,7 @@ export type TarotCard = {
   fortuneReversed: string;
 };
 
-export const majorArcana: TarotCard[] = [
+export const allCards: TarotCard[] = [
   {
     id: 0,
     number: "0",
