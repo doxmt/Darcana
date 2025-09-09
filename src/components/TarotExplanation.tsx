@@ -2,14 +2,14 @@ import "./TarotExplanation.css";
 import { useParams } from "react-router-dom";
 import Card from "./Card";
 import SpeechBubble from "./SpeechBubble";
-import { majorArcana } from "../data/majorArcana";
-import type { TarotCard } from "../data/majorArcana";
+import { allCards } from "../data/AllArcana";
+import type { TarotCard } from "../data/AllArcana";
 
 const TarotExplanation = () => {
   const { id, direction } = useParams<{ id: string; direction: string }>();
   const cardId = Number(id);
   const isReversed = direction === "reversed";
-  const cardData: TarotCard = majorArcana.find((c) => c.id === cardId)!;
+  const cardData: TarotCard = allCards.find((c) => c.id === cardId)!;
 
   const keywords = isReversed
     ? cardData.keywordsReversed

@@ -1,6 +1,6 @@
 import "./CardItem.css";
 // import Button from "./Button.tsx";
-import type { TarotCard } from "../data/majorArcana.tsx";
+import type { TarotCard } from "../data/AllArcana.tsx";
 import { getCardImage } from "../util/get-card-image";
 
 interface CardItemProps {

@@ -1,7 +1,7 @@
 import "./Overlay.css";
 import Button from "./Button";
 import { useState } from "react";
-import type { TarotCard } from "../data/majorArcana.tsx";
+import type { TarotCard } from "../data/AllArcana.tsx";
 import { getCardImage } from "../util/get-card-image";
 
 interface OverlayProps {

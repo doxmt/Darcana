@@ -1,16 +1,16 @@
-import { majorArcana } from "../data/majorArcana";
 import CardItem from "./CardItem";
 import "./CardList.css";
-import type { TarotCard } from "../data/majorArcana";
+import type { TarotCard } from "../data/AllArcana";
 
 interface CardListProps {
+  cards: TarotCard[];
   onSelect?: (card: TarotCard) => void;
 }
 
-const CardList = ({ onSelect }: CardListProps) => {
+const CardList = ({ cards, onSelect }: CardListProps) => {
   return (
     <div className="CardList">
-      {majorArcana.map((card) => (
+      {cards.map((card: TarotCard) => (
         <CardItem key={card.id} card={card} onSelect={onSelect} />
       ))}
     </div>
