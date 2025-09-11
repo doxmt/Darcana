@@ -11,6 +11,12 @@ const TarotExplanation = () => {
   const isReversed = direction === "reversed";
   const cardData: TarotCard = allCards.find((c) => c.id === cardId)!;
 
+  if (!cardData) {
+    return (
+      <div className="TarotExplanation">해당 카드를 찾을 수 없습니다 😿</div>
+    );
+  }
+
   const keywords = isReversed
     ? cardData.keywordsReversed
     : cardData.keywordsUpright;
